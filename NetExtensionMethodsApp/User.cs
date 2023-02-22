@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace NetExtensionMethodsApp
 {
-    internal class User
+    internal partial class User
     {
+        public string Name { set; get; }
+        public partial void PrintName();
+
+        public void Print()
+        {
+            PrintName();
+        }
     }
 }
