@@ -1,5 +1,14 @@
 ﻿namespace NetExtensionMethodsApp
 {
+    internal partial class User
+    {
+        public int Age { get; set; }
+        public partial void PrintName()
+        {
+            Console.WriteLine(Name);
+        }
+    }
+
     public static class StringExtension
     {
         public static bool IsChar(this string str, char ch)
@@ -26,6 +35,8 @@
 
             Console.WriteLine(f);
             Console.WriteLine(str.CountChar('l'));
+
+            User user = new() { Name = "Bob", Age = 23 };
         }
     }
 }
